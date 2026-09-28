@@ -1,0 +1,16 @@
+# Unused empty pages
+showcase.html
+testimonials.html
+
+# Private configuration
+.env
+.env.*
+*.secret
+
+# Editor and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
