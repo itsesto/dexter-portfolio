@@ -7966,3 +7966,154 @@ a.contact-detail-item:hover {
     object-position: center;
   }
 }
+.sidebar-socials {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+  padding: 0 10px !important;
+  box-sizing: border-box !important;
+}
+
+.sidebar-socials a {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  flex: 0 0 34px !important;
+  box-sizing: border-box !important;
+}
+
+.sidebar-socials a img {
+  width: 19px !important;
+  height: 19px !important;
+}
+/* =========================================
+   PUBLIC PROFILE VISITOR COUNTER
+========================================= */
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.portfolio-visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 14px;
+  color: #624f43;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(151, 116, 91, 0.35);
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(92, 67, 49, 0.08);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.portfolio-visitor-counter.is-loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-visitor-counter:hover {
+  border-color: rgba(151, 116, 91, 0.7);
+  box-shadow: 0 10px 24px rgba(92, 67, 49, 0.14);
+}
+
+.visitor-live-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  background: #52a66f;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(82, 166, 111, 0.45);
+  animation: visitor-dot-pulse 2s infinite;
+}
+
+.visitor-count-number {
+  color: #2f2925;
+  font-weight: 700;
+}
+
+.visitor-count-label {
+  color: #76665c;
+}
+
+@keyframes visitor-dot-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(82, 166, 111, 0.45);
+  }
+
+  70% {
+    box-shadow: 0 0 0 7px rgba(82, 166, 111, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(82, 166, 111, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .portfolio-visitor-counter {
+    min-height: 36px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-visitor-counter,
+  .visitor-live-dot {
+    animation: none;
+    transition: none;
+  }
+}
+/* Visitor counter position above tools section */
+
+.home-hero {
+  position: relative;
+}
+
+.home-hero .portfolio-visitor-counter {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .home-hero .portfolio-visitor-counter {
+    position: static;
+    width: fit-content;
+    margin-top: 14px;
+  }
+}
+.home-hero .portfolio-visitor-counter {
+  border: 1.5px solid #b87952;
+}
+
+.home-hero .portfolio-visitor-counter:hover {
+  border-color: #8f5738;
+}

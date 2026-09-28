@@ -147,40 +147,96 @@ function renderSidebar() {
 
       <div class="social-links">
         <a
-          href="${portfolioData.socialLinks.github}"
-          aria-label="GitHub"
-        >
-          ${icon("github", 19)}
-        </a>
+<div
+  class="sidebar-socials"
+  style="
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 18px !important;
+    width: fit-content !important;
+    margin: 10px auto 26px !important;
+    padding: 0 !important;
+    position: relative;
+    left: 0;
+    top: -8px;
+    transform: translateX(-10px);
+  "
+>
+  <a
+    href="https://www.linkedin.com/in/dexter-esto-359b33296/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    title="LinkedIn"
+    style="
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid #dcc9ba;
+      border-radius: 50%;
+      background: #fffaf6;
+    "
+  >
+    <img
+      src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128"
+      alt="LinkedIn"
+      style="width: 22px; height: 22px; display: block;"
+    >
+  </a>
+  <a
+    href="https://www.upwork.com/freelancers/~0126b8b400b7641ac2"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Upwork"
+    title="Upwork"
+    style="
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid #dcc9ba;
+      border-radius: 50%;
+      background: #fffaf6;
+    "
+  >
+    <img
+      src="https://www.google.com/s2/favicons?domain=upwork.com&sz=128"
+      alt="Upwork"
+      style="width: 22px; height: 22px; display: block;"
+    >
+  </a>
 
-        <a
-          href="${portfolioData.socialLinks.linkedin}"
-          aria-label="LinkedIn"
-        >
-          ${icon("linkedin", 19)}
-        </a>
-
-        <a
-          href="${portfolioData.socialLinks.x}"
-          aria-label="X"
-        >
-          ${icon("x", 18)}
-        </a>
-
-        <a
-          href="${portfolioData.socialLinks.youtube}"
-          aria-label="YouTube"
-        >
-          ${icon("youtube", 20)}
-        </a>
-
-        <a
-          href="mailto:${portfolioData.profile.email}"
-          aria-label="Email Dexter"
-        >
-          ${icon("mail", 19)}
-        </a>
-      </div>
+  <a
+    href="https://v2.onlinejobs.ph/jobseekers/info/5413108"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="OnlineJobs.ph"
+    title="OnlineJobs.ph"
+    style="
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid #dcc9ba;
+      border-radius: 50%;
+      background: #fffaf6;
+    "
+  >
+    <img
+      src="https://www.google.com/s2/favicons?domain=onlinejobs.ph&sz=128"
+      alt="OnlineJobs.ph"
+      style="width: 22px; height: 22px; display: block;"
+    >
+  </a>
+</div>
     </section>
 
     <nav
