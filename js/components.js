@@ -889,6 +889,10 @@ function renderProjectVisual(project) {
     "coastal-solar": {
       src: "assets/images/projects/coastal-solar-cover.png",
       alt: "Coastal Solar AI customer support dashboard"
+    },
+    "garmentops": {
+      src: "assets/images/projects/garmentops-cover.png",
+      alt: "GarmentOps production exception monitoring workflow"
     }
   };
 

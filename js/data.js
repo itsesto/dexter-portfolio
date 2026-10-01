@@ -182,6 +182,7 @@ tools: [
 };
 
 portfolioData.projects = [
+  
   {
     id: "leadflow-ai",
     title: "LeadFlow AI",
@@ -280,18 +281,41 @@ portfolioData.projects = [
       "AI",
       "JavaScript"
     ]
+  },
+    {
+    id: "garmentops",
+    title: "GarmentOps Exception Monitoring",
+    category: "Operations Automation",
+    type: "garmentops",
+    summary:
+      "A five-workflow automation prototype that detects garment production exceptions, creates structured logs, generates AI summaries, sends urgent alerts, and supports human review.",
+    tools: [
+      "n8n",
+      "Google Sheets",
+      "Ollama",
+      "Gmail",
+      "JavaScript"
+    ]
   }
 ];
+
 
 portfolioData.projectFilters = [
   "All",
   "CRM",
   "Lead Generation",
   "Customer Support",
-  "Voice AI"
+  "Voice AI",
+  "Operations Automation"
 ];
 
 portfolioData.homeVideos = [
+    {
+    title: "GarmentOps",
+    subtitle: "Production Exception Monitoring System",
+    src: "assets/videos/garmentops.mp4",
+    projectUrl: "case-study.html?project=garmentops"
+  },
   {
     title: "PrimeFlow",
     subtitle: "AI Voice Receptionist",
@@ -686,8 +710,68 @@ portfolioData.caseStudies = {
       monthlyToolCost: 2500,
       setupCost: 32000
     }
+  },
+      garmentops: {
+    workflowImage:
+      "assets/images/workflows/garmentops-workflow.png",
+
+    workflowAlt:
+      "GarmentOps production exception monitoring workflow.",
+
+    workflowCaption:
+      "Production orders are evaluated against operational rules. Detected exceptions are recorded in Google Sheets, summarized with Ollama, and routed for notification and human review.",
+
+    businessProblem:
+      "Garment production teams often rely on staff to repeatedly inspect spreadsheets for low materials, unavailable supplies, deadline risks, failed quality checks, and missing production updates. Important issues can be discovered late, while follow-ups and resolution notes become scattered.",
+
+    businessSolution:
+      "GarmentOps uses five coordinated n8n workflows to monitor production records and detect operational exceptions. Issues are recorded in Google Sheets, summarized using a locally hosted Ollama model, and sent by email when immediate attention is required. Human reviewers can resolve or dismiss cases, add notes, and maintain a clear review history. A daily digest summarizes exception counts and orders requiring action.",
+
+    metrics: [
+      {
+        label: "Production monitoring",
+        before: "Manual spreadsheet checks",
+        after: "Automated rule evaluation"
+      },
+      {
+        label: "Exception records",
+        before: "Scattered follow-ups",
+        after: "Centralized exception log"
+      },
+      {
+        label: "Urgent issues",
+        before: "May be discovered late",
+        after: "Automatic email alerts"
+      },
+      {
+        label: "Management reporting",
+        before: "Manually prepared",
+        after: "Daily automated digest"
+      }
+    ],
+
+    improvements: [
+      "Faster visibility into production problems",
+      "Reduced repetitive spreadsheet checking",
+      "Consistent exception classification",
+      "AI-generated summaries and recommended actions",
+      "Clear resolved and dismissed review history",
+      "Duplicate and previously reviewed case protection",
+      "Daily production-management visibility"
+    ],
+
+    roiDefaults: {
+      monthlyVolume: 150,
+      minutesBefore: 12,
+      minutesAfter: 3,
+      hourlyRate: 350,
+      monthlyToolCost: 1000,
+      setupCost: 28000
+    }
   }
+  
 };
+
 
 /* ========================================
    SERVICES PAGE
