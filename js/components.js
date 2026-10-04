@@ -856,6 +856,37 @@ function renderHome() {
 
 function renderProjectVisual(project) {
   const projectCovers = {
+    "bookingkoala-ghl": {
+  title: "Booking CRM Sync",
+  statOne: "Live",
+  labelOne: "Booking intake",
+  statTwo: "CRM",
+  labelTwo: "GoHighLevel",
+  statThree: "Auto",
+  labelThree: "Follow-up ready",
+  steps: [
+    "Receive booking",
+    "Validate customer",
+    "Find or create contact",
+    "Update CRM"
+  ]
+},
+
+terraglow: {
+  title: "Inventory & Procurement",
+  statOne: "16",
+  labelOne: "Products checked",
+  statTwo: "05",
+  labelTwo: "Workflows",
+  statThree: "09",
+  labelThree: "Exception alerts",
+  steps: [
+    "Monitor inventory",
+    "Prepare purchase",
+    "Validate delivery",
+    "Reconcile bill"
+  ]
+},
     "leadflow-ai": {
       src: "assets/images/projects/leadflow-cover.png",
       alt: "LeadFlow AI lead qualification dashboard"
@@ -893,7 +924,20 @@ function renderProjectVisual(project) {
     "garmentops": {
       src: "assets/images/projects/garmentops-cover.png",
       alt: "GarmentOps production exception monitoring workflow"
-    }
+    },
+    "bookingkoala-ghl": {
+  src:
+    "assets/images/projects/bookingkoala-ghl-cover.png",
+  alt:
+    "BookingKoala and GoHighLevel booking CRM automation"
+},
+
+terraglow: {
+  src:
+    "assets/images/projects/terraglow-cover.png",
+  alt:
+    "TerraGlow inventory and procurement automation dashboard"
+}
   };
 
   const cover = projectCovers[project.id];

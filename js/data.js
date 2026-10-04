@@ -182,6 +182,35 @@ tools: [
 };
 
 portfolioData.projects = [
+  {
+  id: "bookingkoala-ghl",
+  title: "BookingKoala–GoHighLevel Automation",
+  category: "CRM",
+  type: "bookingkoala-ghl",
+  summary:
+    "A Zapier automation that transfers BookingKoala booking data into GoHighLevel, keeps customer records organized, and supports consistent follow-up.",
+  tools: [
+    "Zapier",
+    "BookingKoala",
+    "GoHighLevel",
+    "Webhooks"
+  ]
+},
+
+{
+  id: "terraglow",
+  title: "TerraGlow Inventory & Procurement Automation",
+  category: "Operations Automation",
+  type: "terraglow",
+  summary:
+    "A five-workflow prototype for low-stock monitoring, purchase preparation, goods-receipt validation, Xero bill reconciliation, and management exception reporting.",
+  tools: [
+    "n8n",
+    "Unleashed",
+    "Xero",
+    "JavaScript"
+  ]
+},
   
   {
     id: "leadflow-ai",
@@ -310,6 +339,21 @@ portfolioData.projectFilters = [
 ];
 
 portfolioData.homeVideos = [
+  {
+    title: "TerraGlow",
+    subtitle: "Inventory & Procurement Automation",
+    src: "assets/videos/terraglow-showreel.mp4",
+    projectUrl: "case-study.html?project=terraglow"
+  },
+
+  {
+    title: "BookingKoala–GoHighLevel",
+    subtitle: "Booking and CRM Automation",
+    src: "assets/videos/bookingkoala-ghl-showreel.mp4",
+    projectUrl:
+      "case-study.html?project=bookingkoala-ghl"
+  },
+
     {
     title: "GarmentOps",
     subtitle: "Production Exception Monitoring System",
@@ -364,6 +408,123 @@ portfolioData.homeVideos = [
 ======================================== */
 
 portfolioData.caseStudies = {
+
+  "bookingkoala-ghl": {
+  workflowImage: "assets/images/workflows/bookingkoala-ghl-workflow.png",
+
+  workflowAlt:
+    "BookingKoala booking and GoHighLevel CRM synchronization workflow.",
+
+  workflowCaption:
+    "New and updated bookings are validated in Zapier before the customer and booking information is synchronized with GoHighLevel.",
+
+  businessProblem:
+    "Service businesses can lose time manually copying BookingKoala customers and appointments into GoHighLevel. Re-entering the same information increases the risk of missing records, duplicated contacts, delayed follow-up, and inconsistent CRM data.",
+
+  businessSolution:
+    "This Zapier automation receives BookingKoala booking information, validates the required customer fields, finds or creates the matching GoHighLevel contact, and keeps the CRM record ready for follow-up. Incomplete information is routed for review instead of creating unreliable records.",
+
+  metrics: [
+    {
+      label: "Booking transfer",
+      before: "Manual data entry",
+      after: "Automatic CRM sync"
+    },
+    {
+      label: "Contact matching",
+      before: "Manual searching",
+      after: "Find-or-create logic"
+    },
+    {
+      label: "Follow-up readiness",
+      before: "Delayed CRM updates",
+      after: "Immediate handoff"
+    },
+    {
+      label: "Data quality",
+      before: "Inconsistent entry",
+      after: "Mapped and validated"
+    }
+  ],
+
+  improvements: [
+    "Reduced repetitive booking data entry",
+    "Faster BookingKoala-to-CRM handoff",
+    "Consistent GoHighLevel field mapping",
+    "Find-or-create contact handling",
+    "Cleaner customer and booking records",
+    "Human review for incomplete information"
+  ],
+
+  roiDefaults: {
+    monthlyVolume: 120,
+    minutesBefore: 8,
+    minutesAfter: 2,
+    hourlyRate: 350,
+    monthlyToolCost: 1800,
+    setupCost: 18000
+  }
+},
+
+terraglow: {
+  workflowImage: "assets/images/workflows/terraglow-workflow.png",
+
+  workflowAlt:
+    "TerraGlow inventory, procurement, receiving, bill reconciliation, and management-alert workflow.",
+
+  workflowCaption:
+    "Five coordinated workflows monitor stock, prepare purchase proposals, validate deliveries, reconcile Xero bills, and summarize management exceptions.",
+
+  businessProblem:
+    "Inventory and procurement teams must repeatedly check stock levels, prepare purchase orders, validate deliveries, compare supplier bills, and report exceptions. When these checks are disconnected, stock shortages, damaged goods, quantity differences, pricing errors, and supplier mismatches can be discovered late.",
+
+  businessSolution:
+    "TerraGlow uses five organized n8n workflows around Unleashed and Xero processes. The prototype monitors low stock, prepares purchase recommendations, validates received quantities and batch information, reconciles draft bills, and creates a prioritized management digest. High-impact actions require human approval.",
+
+  metrics: [
+    {
+      label: "Operational coverage",
+      before: "Disconnected checks",
+      after: "5 coordinated workflows"
+    },
+    {
+      label: "Inventory monitoring",
+      before: "Manual stock review",
+      after: "16 products evaluated"
+    },
+    {
+      label: "Bill control",
+      before: "Manual comparison",
+      after: "4 exception types detected"
+    },
+    {
+      label: "Management visibility",
+      before: "Scattered follow-ups",
+      after: "1 digest and 9 alerts"
+    }
+  ],
+
+  improvements: [
+    "Earlier visibility into low-stock products",
+    "Supplier-grouped purchase recommendations",
+    "Duplicate purchase-order protection",
+    "Partial, damaged, and missing-batch receipt checks",
+    "Quantity, price, supplier, tax, and total validation",
+    "Prioritized management exception alerts",
+    "Human approval before purchasing or accounting writes"
+  ],
+
+  roiDefaults: {
+    monthlyVolume: 250,
+    minutesBefore: 12,
+    minutesAfter: 3,
+    hourlyRate: 350,
+    monthlyToolCost: 4500,
+    setupCost: 45000
+  }
+},
+
+
   primeflow: {
     workflowImage:
       "assets/images/workflows/primeflow-workflow.png",
