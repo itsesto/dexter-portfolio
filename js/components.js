@@ -288,7 +288,11 @@ function renderTools() {
     "APIs": "openapis.org",
     "Webhooks": "webhook.site",
     "ngrok": "ngrok.com",
-    "Mailtrap": "mailtrap.io"
+    "Mailtrap": "mailtrap.io",
+    "BookingKoala": "bookingkoala.com",
+    "Unleashed": "unleashedsoftware.com",
+    "Xero": "xero.com",
+    "QuickBooks": "quickbooks.intuit.com" 
   };
 
   return portfolioData.home.tools

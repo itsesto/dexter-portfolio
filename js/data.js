@@ -96,7 +96,11 @@ tools: [
   "APIs",
   "Webhooks",
   "ngrok",
-  "Mailtrap"
+  "Mailtrap",
+  "BookingKoala",
+  "Unleashed",
+  "QuickBooks",
+  "Xero"
 ],
 
   aiBuilds: [
