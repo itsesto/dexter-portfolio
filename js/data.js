@@ -64,7 +64,7 @@ portfolioData.home = {
   hero: {
     title: "I build AI systems that run your business while you sleep.",
     description:
-      "AI automation engineer helping businesses replace repetitive work with organized workflows."
+      "AI Automation Engineer | Specialist helping businesses replace repetitive work with organized workflows."
   },
 
 tools: [
@@ -186,6 +186,21 @@ tools: [
 };
 
 portfolioData.projects = [
+    {
+    id: "trackora",
+    title: "Trackora / Custom Website & E-commerce Monitoring Dashboard",
+    category: "E-Commerce Automation",
+    type: "trackora",
+    summary:
+      "A locally developed Shopify monitoring and commerce intelligence dashboard with automated price detection, price history, competitor records, inventory analytics, and alerts.",
+    tools: [
+      "React",
+      "n8n",
+      "Shopify",
+      "Google Sheets",
+      "Slack"
+    ]
+  },
   {
   id: "bookingkoala-ghl",
   title: "BookingKoala–GoHighLevel Automation",
@@ -339,10 +354,19 @@ portfolioData.projectFilters = [
   "Lead Generation",
   "Customer Support",
   "Voice AI",
+  "E-Commerce Automation",
   "Operations Automation"
 ];
 
 portfolioData.homeVideos = [
+    {
+    title: "Trackora / Custom Website & E-commerce Monitoring Dashboard",
+    subtitle:
+      "E-Commerce Monitoring & Intelligence Dashboard",
+    src: "assets/videos/trackora-showreel.mp4",
+    projectUrl:
+      "case-study.html?project=trackora"
+  },
   {
     title: "TerraGlow",
     subtitle: "Inventory & Procurement Automation",
@@ -412,6 +436,104 @@ portfolioData.homeVideos = [
 ======================================== */
 
 portfolioData.caseStudies = {
+
+    trackora: {
+    workflowImage:
+      "assets/images/workflows/trackora-architecture.svg",
+
+    workflowAlt:
+      "Trackora workflow connecting Shopify, n8n, Google Sheets, Slack, and the React dashboard.",
+
+    workflowCaption:
+      "Shopify product data moves through n8n for normalization, price comparison, record updates, history tracking, and Slack notifications before being displayed in the React dashboard.",
+
+    businessProblem:
+      "E-commerce teams can struggle to monitor changing prices, inventory levels, and competitor information across multiple product variants. Manual checking is repetitive, changes can be missed, and historical pricing information is often scattered across different tools.",
+
+    businessSolution:
+      "I built Trackora as a locally developed monitoring prototype. n8n retrieves Shopify product and variant data through the GraphQL Admin API, compares current prices with stored records, updates Google Sheets, records genuine price changes, and sends Slack alerts. A React dashboard displays products, inventory analytics, price history, competitor records, comparisons, and alerts in one interface.",
+
+    metricsLabel: "03 — VERIFIED TEST RESULTS",
+
+    metricsTitle:
+      "What the development tests confirmed",
+
+    metricsDescription:
+      "Results observed during local testing, not commercial performance claims.",
+
+    metricsBadge: "LOCAL PROTOTYPE",
+
+    metricsColumns: {
+      label: "Validation",
+      before: "Test scope",
+      after: "Observed result"
+    },
+
+    metrics: [
+      {
+        label: "Shopify monitoring",
+        before: "17 product variants",
+        after: "Retrieved, stored, and displayed"
+      },
+      {
+        label: "Inventory analytics",
+        before: "Latest Shopify records",
+        after: "330 inventory units analyzed"
+      },
+      {
+        label: "Controlled price test",
+        before: "$300 → $280",
+        after: "$20 decrease recorded and alerted"
+      },
+      {
+        label: "Duplicate prevention",
+        before: "Repeated unchanged check",
+        after: "No duplicate history or alert"
+      }
+    ],
+
+    improvements: [
+      "Centralized product, inventory, and pricing visibility",
+      "Automated Shopify variant monitoring",
+      "Price history created only for genuine changes",
+      "Duplicate-safe Google Sheets updates",
+      "Slack notifications for verified price movements",
+      "Competitor product records and numerical comparisons",
+      "Clear separation between current status and historical movement"
+    ],
+        keyFeatures: [
+      {
+        title: "Analytics Overview",
+        description:
+          "Shows monitored variants, inventory availability, pricing distribution, and saved Shopify records."
+      },
+      {
+        title: "Product Monitoring",
+        description:
+          "Tracks variant-level prices, inventory, images, and product information through Shopify GraphQL."
+      },
+      {
+        title: "Price History",
+        description:
+          "Records genuine price changes without creating duplicate events for unchanged prices."
+      },
+      {
+        title: "Competitor Records",
+        description:
+          "Stores manually tested competitor prices, variants, availability, and source information."
+      },
+      {
+        title: "Price Comparison",
+        description:
+          "Displays numerical price differences without claiming that products are exact equivalents."
+      },
+      {
+        title: "Alerts Activity",
+        description:
+          "Records pricing events and supports Slack notifications for verified Shopify price changes."
+      }
+    ]
+  },
 
   "bookingkoala-ghl": {
   workflowImage: "assets/images/workflows/bookingkoala-ghl-workflow.png",

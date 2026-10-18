@@ -891,6 +891,10 @@ terraglow: {
     "Reconcile bill"
   ]
 },
+    trackora: {
+      src: "assets/images/projects/trackora-cover.png",
+      alt: "Trackora e-commerce monitoring and intelligence dashboard"
+    },
     "leadflow-ai": {
       src: "assets/images/projects/leadflow-cover.png",
       alt: "LeadFlow AI lead qualification dashboard"
@@ -1344,7 +1348,39 @@ function initializeRoiCalculator() {
 /* ========================================
    DYNAMIC CASE-STUDY PAGE
 ======================================== */
+function renderCaseStudyFeatures(details) {
+  if (
+    !Array.isArray(details.keyFeatures) ||
+    details.keyFeatures.length === 0
+  ) {
+    return "";
+  }
 
+  return `
+    <section class="case-study-section">
+      <span class="section-label">
+        07 — KEY FEATURES
+      </span>
+
+      <h2>
+        What Trackora includes
+      </h2>
+
+      <div class="case-business-grid">
+        ${details.keyFeatures
+          .map((feature) => {
+            return `
+              <article class="case-detail-card">
+                <h3>${feature.title}</h3>
+                <p>${feature.description}</p>
+              </article>
+            `;
+          })
+          .join("")}
+      </div>
+    </section>
+  `;
+}
 function renderCaseStudy() {
   const app = document.getElementById("app");
 
@@ -1395,6 +1431,13 @@ function renderCaseStudy() {
   });
 
   const workflowSteps = {
+        trackora: [
+      "Retrieve Shopify products and variants",
+      "Normalize and compare saved prices",
+      "Update current records in Google Sheets",
+      "Record genuine price-change events",
+      "Display saved data in the React dashboard"
+    ],
     primeflow: [
       "Receive the customer call",
       "Collect the caller’s information",
@@ -1453,7 +1496,15 @@ function renderCaseStudy() {
       "Record the completed result"
     ];
 
-  const defaults = details.roiDefaults;
+  const defaults = details.roiDefaults || {
+  monthlyVolume: 0,
+  minutesBefore: 0,
+  minutesAfter: 0,
+  hourlyRate: 0,
+  monthlyToolCost: 0,
+  setupCost: 0
+};
+  
 
   document.title =
     `${project.title} | Dexter Esto`;
@@ -1725,7 +1776,7 @@ function renderCaseStudy() {
           </ul>
         </article>
       </section>
-
+      ${renderCaseStudyFeatures(details)}
       <section
         class="roi-calculator"
         id="roiCalculator"

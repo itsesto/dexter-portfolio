@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">Trackora system architecture</title>
+  <desc id="desc">Trackora connects Shopify and competitor product pages to n8n workflows, Google Sheets records, Slack notifications, authenticated webhook APIs, and a local React dashboard.</desc>
+  <defs>
+    <linearGradient id="trackora-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf7f1"/>
+      <stop offset="1" stop-color="#f2e6da"/>
+    </linearGradient>
+    <filter id="trackora-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2f2b28" flood-opacity=".11"/>
+    </filter>
+    <marker id="trackora-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6 0 12Z" fill="#c96938"/>
+    </marker>
+    <style>
+      .heading{font-family:Georgia,serif;font-size:50px;font-weight:700;fill:#292622}
+      .subheading{font-family:Arial,sans-serif;font-size:22px;fill:#746d66}
+      .lane{font-family:Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:2px;fill:#b85d32}
+      .card-title{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#292622}
+      .card-copy{font-family:Arial,sans-serif;font-size:17px;fill:#746d66}
+      .flow{fill:none;stroke:#c96938;stroke-width:4;marker-end:url(#trackora-arrow)}
+    </style>
+  </defs>
+
+  <rect width="1600" height="760" rx="38" fill="url(#trackora-bg)"/>
+  <circle cx="1480" cy="65" r="170" fill="#ffffff" opacity=".32"/>
+  <text x="80" y="88" class="heading">Trackora System Architecture</text>
+  <text x="80" y="130" class="subheading">Separate monitoring workflows feed saved records into authenticated APIs and a local React dashboard.</text>
+
+  <text x="80" y="202" class="lane">SHOPIFY MONITORING — SCHEDULED AND VERIFIED</text>
+  <g filter="url(#trackora-shadow)">
+    <g transform="translate(80 232)">
+      <rect width="250" height="138" rx="22" fill="#fffdfa" stroke="#dfc8b7" stroke-width="2"/>
+      <circle cx="42" cy="42" r="21" fill="#292622"/>
+      <path d="M31 37h22l-2 19H34zM36 37c0-7 3-11 6-11s6 4 6 11" fill="none" stroke="#fff" stroke-width="3"/>
+      <text x="76" y="43" class="card-title">Shopify GraphQL</text>
+      <text x="28" y="87" class="card-copy">Products, variants, prices,</text>
+      <text x="28" y="112" class="card-copy">images, and inventory</text>
+    </g>
+    <g transform="translate(410 232)">
+      <rect width="250" height="138" rx="22" fill="#fffdfa" stroke="#dfc8b7" stroke-width="2"/>
+      <circle cx="42" cy="42" r="21" fill="#e86f3d"/>
+      <path d="M29 42h26M34 32l-5 10 5 10M50 32l5 10-5 10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <text x="76" y="43" class="card-title">n8n Monitoring</text>
+      <text x="28" y="87" class="card-copy">Normalize, compare, upsert,</text>
+      <text x="28" y="112" class="card-copy">and filter genuine changes</text>
+    </g>
+    <g transform="translate(740 232)">
+      <rect width="250" height="138" rx="22" fill="#fffdfa" stroke="#dfc8b7" stroke-width="2"/>
+      <circle cx="42" cy="42" r="21" fill="#2c9c62"/>
+      <path d="M30 28h24v28H30zM38 28v28M30 38h24M30 47h24" fill="none" stroke="#fff" stroke-width="2.5"/>
+      <text x="76" y="43" class="card-title">Google Sheets</text>
+      <text x="28" y="87" class="card-copy">Current products and</text>
+      <text x="28" y="112" class="card-copy">price-history events</text>
+    </g>
+    <g transform="translate(1070 232)">
+      <rect width="200" height="138" rx="22" fill="#fffdfa" stroke="#dfc8b7" stroke-width="2"/>
+      <circle cx="42" cy="42" r="21" fill="#6f4ad4"/>
+      <path d="M31 32h22v19H42l-7 6v-6h-4z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <text x="76" y="43" class="card-title">Slack</text>
+      <text x="28" y="87" class="card-copy">Price-change</text>
+      <text x="28" y="112" class="card-copy">notifications</text>
+    </g>
+  </g>
+  <path d="M338 301h58" class="flow"/>
+  <path d="M668 301h58" class="flow"/>
+  <path d="M998 272h58" class="flow"/>
+
+  <text x="80" y="442" class="lane">COMPETITOR MONITORING — MANUALLY TESTED</text>
+  <g filter="url(#trackora-shadow)">
+    <g transform="translate(80 472)">
+      <rect width="250" height="138" rx="22" fill="#fffdfa" stroke="#dfc8b7" stroke-width="2"/>
+      <circle cx="42" cy="42" r="21" fill="#7c746d"/>
+      <path d="M29 34h26v18H29zM34 29h16v5M37 57h10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <text x="76" y="43" class="card-title">Product Page</text>
+      <text x="28" y="87" class="card-copy">Publicly accessible</text>
+      <text x="28" y="112" class="card-copy">selected variant</text>
+    </g>
+    <g transform="translate(410 472)">
+      <rect width="250" height="138" rx="22" fill="#fffdfa" stroke="#dfc8b7" stroke-width="2"/>
+      <circle cx="42" cy="42" r="21" fill="#e86f3d"/>
+      <path d="M29 42h26M34 32l-5 10 5 10M50 32l5 10-5 10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <text x="76" y="43" class="card-title">HTTP + JSON-LD</text>
+      <text x="28" y="87" class="card-copy">Extract variant data and</text>
+      <text x="28" y="112" class="card-copy">compare saved prices</text>
+    </g>
+    <g transform="translate(740 472)">
+      <rect width="250" height="138" rx="22" fill="#fffdfa" stroke="#dfc8b7" stroke-width="2"/>
+      <circle cx="42" cy="42" r="21" fill="#2c9c62"/>
+      <path d="M30 28h24v28H30zM38 28v28M30 38h24M30 47h24" fill="none" stroke="#fff" stroke-width="2.5"/>
+      <text x="76" y="43" class="card-title">Saved Records</text>
+      <text x="28" y="87" class="card-copy">Duplicate-safe competitor</text>
+      <text x="28" y="112" class="card-copy">data and history design</text>
+    </g>
+  </g>
+  <path d="M338 541h58" class="flow"/>
+  <path d="M668 541h58" class="flow"/>
+
+  <g filter="url(#trackora-shadow)">
+    <g transform="translate(1070 442)">
+      <rect width="450" height="198" rx="24" fill="#292622" stroke="#292622" stroke-width="2"/>
+      <text x="30" y="47" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.5" fill="#f08a55">AUTHENTICATED DATA LAYER</text>
+      <text x="30" y="84" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#fff">n8n Webhook APIs → Vite Proxy</text>
+      <path d="M30 104h390" stroke="#5a5550" stroke-width="1"/>
+      <text x="30" y="137" font-family="Arial,sans-serif" font-size="18" fill="#d8d1ca">React dashboard: Overview, Products,</text>
+      <text x="30" y="165" font-family="Arial,sans-serif" font-size="18" fill="#d8d1ca">History, Competitors, Comparison, Alerts</text>
+    </g>
+  </g>
+
+  <path d="M990 332c170 0 116 80 204 98" class="flow"/>
+  <path d="M998 570h58" class="flow"/>
+
+  <g transform="translate(80 674)">
+    <rect width="1440" height="48" rx="14" fill="#fff9f3" stroke="#dfc8b7"/>
+    <text x="24" y="31" font-family="Arial,sans-serif" font-size="17" fill="#746d66">Local prototype: Shopify scheduling was verified. Recurring competitor collection remains unpublished pending authorization and production safeguards.</text>
+  </g>
+</svg>
